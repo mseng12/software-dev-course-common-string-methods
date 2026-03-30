@@ -68,24 +68,73 @@ Complete the following tasks and assign the results to the specified variables. 
 //Starter Code
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
-// 1. Searching
-let hasJavaScript; // Your code here
-let codingPosition; // Your code here
-let startsWithWelcome; // Your code here
-let endsWithToday; // Your code here
 
-// 2. Transforming
-let lowercaseString; // Your code here
-let uppercaseString; // Your code here
-let trimmedString; // Your code here
-let replacedString; // Your code here
 
-// 3. Breaking Apart
-let wordsArray; // Your code here
+// =====================
+// 1. SEARCHING
+// =====================
 
-// 4. Retrieving
-let firstCharacter; // Your code here
-let extractedBootcamp; // Your code here
+// Check if "JavaScript" exists
+let hasJavaScript = inputString.includes("JavaScript");
+console.log("hasJavaScript:", hasJavaScript);
+
+// Find position of "Coding"
+let codingPosition = inputString.indexOf("Coding");
+console.log("codingPosition:", codingPosition);
+
+// Check if starts with "Welcome" (trim first because of spaces)
+let startsWithWelcome = inputString.trim().startsWith("Welcome");
+console.log("startsWithWelcome:", startsWithWelcome);
+
+// Check if ends with "today."
+let endsWithToday = inputString.trim().endsWith("today.");
+console.log("endsWithToday:", endsWithToday);
+
+
+// =====================
+// 2. TRANSFORMING
+// =====================
+
+// Lowercase
+let lowercaseString = inputString.toLowerCase();
+console.log("lowercaseString:", lowercaseString);
+
+// Uppercase
+let uppercaseString = inputString.toUpperCase();
+console.log("uppercaseString:", uppercaseString);
+
+// Trim spaces
+let trimmedString = inputString.trim();
+console.log("trimmedString:", trimmedString);
+
+// Replace "JavaScript" with "coding"
+let replacedString = inputString.replace("JavaScript", "coding");
+console.log("replacedString:", replacedString);
+
+
+// =====================
+// 3. BREAKING APART
+// =====================
+
+// Split into words
+let wordsArray = trimmedString.split(" ");
+console.log("wordsArray:", wordsArray);
+
+
+// =====================
+// 4. RETRIEVING
+// =====================
+
+// First character
+let firstCharacter = trimmedString.charAt(0);
+console.log("firstCharacter:", firstCharacter);
+
+// Extract "Bootcamp"
+let extractedBootcamp = inputString.slice(
+  inputString.indexOf("Bootcamp"),
+  inputString.indexOf("Bootcamp") + "Bootcamp".length
+);
+console.log("extractedBootcamp:", extractedBootcamp);
 
 // Log all results
 console.log({
